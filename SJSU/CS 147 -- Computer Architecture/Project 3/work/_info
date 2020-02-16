@@ -1,0 +1,1188 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Modelsim Projects/Project 2
+vALU
+Z0 !s110 1574680922
+!i10b 1
+!s100 VEC<gAln14@k>DebQ@aUd3
+IXD5nT=?:<?bc33AV:;Smz1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Modelsim Projects/Project 3
+w1574674305
+8C:/Modelsim Projects/Project 3/alu.v
+FC:/Modelsim Projects/Project 3/alu.v
+Z3 L0 24
+Z4 OP;L;10.4a;61
+r1
+!s85 0
+31
+Z5 !s108 1574680922.000000
+!s107 prj_definition.v|C:/Modelsim Projects/Project 3/alu.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Modelsim Projects/Project 3/alu.v|
+!s101 -O0
+!i113 1
+Z6 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+n@a@l@u
+valu_tb
+!s110 1574680926
+!i10b 1
+!s100 Di:AHZfn9gVJS2>6BFCBc0
+IJSQ]W7]IA49A;WiUg7QO61
+R1
+R2
+w1574674477
+8C:/Modelsim Projects/Project 3/alu_tb.v
+FC:/Modelsim Projects/Project 3/alu_tb.v
+L0 4
+R4
+r1
+!s85 0
+31
+Z7 !s108 1574680925.000000
+!s107 prj_definition.v|C:/Modelsim Projects/Project 3/alu_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Modelsim Projects/Project 3/alu_tb.v|
+!s101 -O0
+!i113 1
+R6
+vAND32_2x1
+Z8 !s110 1574680923
+!i10b 1
+!s100 i<3YYd6L8SYN>[6a7MZ2b3
+I`TEg_z`?8WaIj<m5BMQBf2
+R1
+R2
+Z9 w1574669331
+Z10 8C:/Modelsim Projects/Project 3/logic_32_bit.v
+Z11 FC:/Modelsim Projects/Project 3/logic_32_bit.v
+L0 62
+R4
+r1
+!s85 0
+31
+Z12 !s108 1574680923.000000
+Z13 !s107 C:/Modelsim Projects/Project 3/logic_32_bit.v|
+Z14 !s90 -reportprogress|300|-work|work|-stats=none|C:/Modelsim Projects/Project 3/logic_32_bit.v|
+!s101 -O0
+!i113 1
+R6
+n@a@n@d32_2x1
+vBARREL_SHIFTER32
+R0
+!i10b 1
+!s100 nm>`V;K<@>2EF4nEohH4A3
+IK[R;2W4?W2dR7m?K<G[FX1
+R1
+R2
+Z15 w1574671224
+Z16 8C:/Modelsim Projects/Project 3/barrel_shifter.v
+Z17 FC:/Modelsim Projects/Project 3/barrel_shifter.v
+L0 92
+R4
+r1
+!s85 0
+31
+R5
+Z18 !s107 prj_definition.v|C:/Modelsim Projects/Project 3/barrel_shifter.v|
+Z19 !s90 -reportprogress|300|-work|work|-stats=none|C:/Modelsim Projects/Project 3/barrel_shifter.v|
+!s101 -O0
+!i113 1
+R6
+n@b@a@r@r@e@l_@s@h@i@f@t@e@r32
+vbarrel_shifter_tb
+Z20 !s110 1574680925
+!i10b 1
+!s100 h2LK2P=`;kW9D0^8aSlG90
+IOZ6NR`A7K@5K]R^cn5ijd0
+R1
+R2
+w1574666720
+8C:/Modelsim Projects/Project 3/barrel_shifter_tb.v
+FC:/Modelsim Projects/Project 3/barrel_shifter_tb.v
+L0 3
+R4
+r1
+!s85 0
+31
+R7
+!s107 C:/Modelsim Projects/Project 3/barrel_shifter_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Modelsim Projects/Project 3/barrel_shifter_tb.v|
+!s101 -O0
+!i113 1
+R6
+vCLK_GENERATOR
+R0
+!i10b 1
+!s100 I`I=T4aaeE09lSRDFRN971
+I;CjYJHP1Zmb`^ZiX1BjVJ1
+R1
+R2
+Z21 w1422689906
+8C:/Modelsim Projects/Project 3/clk_gen.v
+FC:/Modelsim Projects/Project 3/clk_gen.v
+Z22 L0 16
+R4
+r1
+!s85 0
+31
+R5
+!s107 prj_definition.v|C:/Modelsim Projects/Project 3/clk_gen.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Modelsim Projects/Project 3/clk_gen.v|
+!s101 -O0
+!i113 1
+R6
+n@c@l@k_@g@e@n@e@r@a@t@o@r
+vCONTROL_UNIT
+R0
+!i10b 1
+!s100 9FSS2zGkW^@iHCo_79Mmk2
+IAN@OmLb@_3Ac^5<C0FJKH2
+R1
+R2
+R21
+Z23 8C:/Modelsim Projects/Project 3/control_unit.v
+Z24 FC:/Modelsim Projects/Project 3/control_unit.v
+Z25 L0 21
+R4
+r1
+!s85 0
+31
+R5
+Z26 !s107 prj_definition.v|C:/Modelsim Projects/Project 3/control_unit.v|
+Z27 !s90 -reportprogress|300|-work|work|-stats=none|C:/Modelsim Projects/Project 3/control_unit.v|
+!s101 -O0
+!i113 1
+R6
+n@c@o@n@t@r@o@l_@u@n@i@t
+vD_FF
+Z28 !s110 1574682185
+!i10b 1
+!s100 1K:THigoedGjO7gEz_3F[3
+IUXf]]og[L6nIkCL9QRn352
+R1
+R2
+Z29 w1574682091
+Z30 8C:/Modelsim Projects/Project 3/logic.v
+Z31 FC:/Modelsim Projects/Project 3/logic.v
+L0 121
+R4
+r1
+!s85 0
+31
+Z32 !s108 1574682185.000000
+Z33 !s107 C:/Modelsim Projects/Project 3/logic.v|
+Z34 !s90 -reportprogress|300|-work|work|-stats=none|C:/Modelsim Projects/Project 3/logic.v|
+!s101 -O0
+!i113 1
+R6
+n@d_@f@f
+vD_LATCH
+R28
+!i10b 1
+!s100 SzNF3AEdbz==HdOWj6Xc10
+IAJ;lIMKMY2md1ld]CSk=03
+R1
+R2
+R29
+R30
+R31
+L0 163
+R4
+r1
+!s85 0
+31
+R32
+R33
+R34
+!s101 -O0
+!i113 1
+R6
+n@d_@l@a@t@c@h
+vDA_VINCI
+R8
+!i10b 1
+!s100 daaTE@@o84`W9_S4X0zN70
+IDjlVKczPBXOdD5n_0f?]G0
+R1
+R2
+R21
+8C:/Modelsim Projects/Project 3/da_vinci.v
+FC:/Modelsim Projects/Project 3/da_vinci.v
+R3
+R4
+r1
+!s85 0
+31
+R12
+!s107 prj_definition.v|C:/Modelsim Projects/Project 3/da_vinci.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Modelsim Projects/Project 3/da_vinci.v|
+!s101 -O0
+!i113 1
+R6
+n@d@a_@v@i@n@c@i
+vDA_VINCI_TB
+R8
+!i10b 1
+!s100 EDhRnJ=27dG@6R3=CZMG53
+I6OeS<JKWSd:9=Z37E`66;1
+R1
+R2
+R21
+8C:/Modelsim Projects/Project 3/da_vinci_tb.v
+FC:/Modelsim Projects/Project 3/da_vinci_tb.v
+R3
+R4
+r1
+!s85 0
+31
+R12
+!s107 prj_definition.v|C:/Modelsim Projects/Project 3/da_vinci_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Modelsim Projects/Project 3/da_vinci_tb.v|
+!s101 -O0
+!i113 1
+R6
+n@d@a_@v@i@n@c@i_@t@b
+vDATA_PATH
+R8
+!i10b 1
+!s100 <G7DR5>j3XWd4Ji1V`O^60
+IJX]E^X>=CX13Xd6DPV=S42
+R1
+R2
+R21
+8C:/Modelsim Projects/Project 3/data_path.v
+FC:/Modelsim Projects/Project 3/data_path.v
+L0 20
+R4
+r1
+!s85 0
+31
+R12
+!s107 prj_definition.v|C:/Modelsim Projects/Project 3/data_path.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Modelsim Projects/Project 3/data_path.v|
+!s101 -O0
+!i113 1
+R6
+n@d@a@t@a_@p@a@t@h
+vDECODER_2x4
+R28
+!i10b 1
+!s100 mLTDlmZd9>nM9N4?SD@:A2
+ISfKHnT_ikdX2Bd2d2YlE?3
+R1
+R2
+R29
+R30
+R31
+L0 308
+R4
+r1
+!s85 0
+31
+R32
+R33
+R34
+!s101 -O0
+!i113 1
+R6
+n@d@e@c@o@d@e@r_2x4
+vDECODER_3x8
+R28
+!i10b 1
+!s100 USSoi`:<ShhZe2kU>41DX3
+I76C6T]5MRNg=C8SK_86R=0
+R1
+R2
+R29
+R30
+R31
+L0 284
+R4
+r1
+!s85 0
+31
+R32
+R33
+R34
+!s101 -O0
+!i113 1
+R6
+n@d@e@c@o@d@e@r_3x8
+vDECODER_4x16
+R28
+!i10b 1
+!s100 =fgV9N_HelQ12h?2jD?Gg0
+IePLW:`a0P79BF?XYA7_Q:0
+R1
+R2
+R29
+R30
+R31
+L0 252
+R4
+r1
+!s85 0
+31
+R32
+R33
+R34
+!s101 -O0
+!i113 1
+R6
+n@d@e@c@o@d@e@r_4x16
+vDECODER_5x32
+R28
+!i10b 1
+!s100 McN3I]J9l6M=Ld8a9SSWm0
+I1lboEL6bCU6oz4RgaeF^Q1
+R1
+R2
+R29
+R30
+R31
+L0 204
+R4
+r1
+!s85 0
+31
+R32
+R33
+R34
+!s101 -O0
+!i113 1
+R6
+n@d@e@c@o@d@e@r_5x32
+vFULL_ADDER
+R8
+!i10b 1
+!s100 BSk=1FmGl0ebkFK8CzmbK3
+IQ]Vb`SiR;Df4Gd_W9C9XU0
+R1
+R2
+w1572779166
+8C:/Modelsim Projects/Project 3/full_adder.v
+FC:/Modelsim Projects/Project 3/full_adder.v
+Z35 L0 22
+R4
+r1
+!s85 0
+31
+R12
+!s107 prj_definition.v|C:/Modelsim Projects/Project 3/full_adder.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Modelsim Projects/Project 3/full_adder.v|
+!s101 -O0
+!i113 1
+R6
+n@f@u@l@l_@a@d@d@e@r
+vfull_adder_tb
+R20
+!i10b 1
+!s100 <D5U]HGzHRUnz3R411;jd1
+I>1aCWOz8YCMhdWN[PhjFc3
+R1
+R2
+w1574650112
+8C:/Modelsim Projects/Project 3/full_adder_tb.v
+FC:/Modelsim Projects/Project 3/full_adder_tb.v
+L0 3
+R4
+r1
+!s85 0
+31
+R7
+!s107 C:/Modelsim Projects/Project 3/full_adder_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Modelsim Projects/Project 3/full_adder_tb.v|
+!s101 -O0
+!i113 1
+R6
+vHALF_ADDER
+R8
+!i10b 1
+!s100 HIEEzmaVB;TEkhLZMn?gN3
+IcT;N?nDUooG2RkaV_6I`l2
+R1
+R2
+w1572743123
+8C:/Modelsim Projects/Project 3/half_adder.v
+FC:/Modelsim Projects/Project 3/half_adder.v
+R25
+R4
+r1
+!s85 0
+31
+R12
+!s107 prj_definition.v|C:/Modelsim Projects/Project 3/half_adder.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Modelsim Projects/Project 3/half_adder.v|
+!s101 -O0
+!i113 1
+R6
+n@h@a@l@f_@a@d@d@e@r
+vhalf_adder_tb
+R20
+!i10b 1
+!s100 <7Gg5E7MFDzm29mf6<T]o0
+IdnD?k;L2A`iW0UnADgZ8W1
+R1
+R2
+w1572778430
+8C:/Modelsim Projects/Project 3/half_adder_tb.v
+FC:/Modelsim Projects/Project 3/half_adder_tb.v
+L0 3
+R4
+r1
+!s85 0
+31
+R7
+!s107 C:/Modelsim Projects/Project 3/half_adder_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Modelsim Projects/Project 3/half_adder_tb.v|
+!s101 -O0
+!i113 1
+R6
+vINV32_1x1
+R8
+!i10b 1
+!s100 ]<LUJzQ<d:PaMEd5869`X0
+IIVQ5301N5`6O=lg^daXOO1
+R1
+R2
+R9
+R10
+R11
+L0 107
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!s101 -O0
+!i113 1
+R6
+n@i@n@v32_1x1
+vlogic_32_bit_tb
+R20
+!i10b 1
+!s100 7G038L4KDQf;2lF3Dm;9P0
+IQR0a2ZISVKAi6NkDBId4E0
+R1
+R2
+w1574669350
+8C:/Modelsim Projects/Project 3/logic_32_bit_tb.v
+FC:/Modelsim Projects/Project 3/logic_32_bit_tb.v
+L0 3
+R4
+r1
+!s85 0
+31
+R7
+!s107 C:/Modelsim Projects/Project 3/logic_32_bit_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Modelsim Projects/Project 3/logic_32_bit_tb.v|
+!s101 -O0
+!i113 1
+R6
+vlogic_tb
+!s110 1574682183
+!i10b 1
+!s100 3Woa[@_NIG64S:ABQ]:nm0
+If5emNno`28JSf0]dObRmb3
+R1
+R2
+w1574682112
+8C:/Modelsim Projects/Project 3/logic_tb.v
+FC:/Modelsim Projects/Project 3/logic_tb.v
+L0 4
+R4
+r1
+!s85 0
+31
+!s108 1574682183.000000
+!s107 prj_definition.v|C:/Modelsim Projects/Project 3/logic_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Modelsim Projects/Project 3/logic_tb.v|
+!s101 -O0
+!i113 1
+R6
+vMEM_64MB_TB
+Z36 !s110 1574680924
+!i10b 1
+!s100 Q0bd^kgMCaH`JYm[fkQkH3
+IHQz2^n`ZmKKHQ3KPVE:]J2
+R1
+R2
+R21
+8C:/Modelsim Projects/Project 3/mem_64MB_tb.v
+FC:/Modelsim Projects/Project 3/mem_64MB_tb.v
+Z37 L0 23
+R4
+r1
+!s85 0
+31
+R12
+!s107 prj_definition.v|C:/Modelsim Projects/Project 3/mem_64MB_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Modelsim Projects/Project 3/mem_64MB_tb.v|
+!s101 -O0
+!i113 1
+R6
+n@m@e@m_64@m@b_@t@b
+vMEMORY_64MB
+R36
+!i10b 1
+!s100 [HnJUC8QNEk>j6FK_9bcB3
+I5gAaO3hDnA^9=IjhZ8odK0
+R1
+R2
+R21
+Z38 8C:/Modelsim Projects/Project 3/memory.v
+Z39 FC:/Modelsim Projects/Project 3/memory.v
+L0 66
+R4
+r1
+!s85 0
+31
+Z40 !s108 1574680924.000000
+Z41 !s107 prj_definition.v|C:/Modelsim Projects/Project 3/memory.v|
+Z42 !s90 -reportprogress|300|-work|work|-stats=none|C:/Modelsim Projects/Project 3/memory.v|
+!s101 -O0
+!i113 1
+R6
+n@m@e@m@o@r@y_64@m@b
+vMEMORY_WRAPPER
+R36
+!i10b 1
+!s100 JbW=66C9AYZiFCAKCdPGk2
+I?Ald6elE46<De>6aSPc_H1
+R1
+R2
+R21
+R38
+R39
+L0 26
+R4
+r1
+!s85 0
+31
+R40
+R41
+R42
+!s101 -O0
+!i113 1
+R6
+n@m@e@m@o@r@y_@w@r@a@p@p@e@r
+vMULT32
+R36
+!i10b 1
+!s100 1I`b[ZR7PHQiS_l23>iSL1
+IU>mhE?;N52XY9I8H4[FPL2
+R1
+R2
+Z43 w1573460694
+Z44 8C:/Modelsim Projects/Project 3/mult.v
+Z45 FC:/Modelsim Projects/Project 3/mult.v
+R35
+R4
+r1
+!s85 0
+31
+R40
+Z46 !s107 prj_definition.v|C:/Modelsim Projects/Project 3/mult.v|
+Z47 !s90 -reportprogress|300|-work|work|-stats=none|C:/Modelsim Projects/Project 3/mult.v|
+!s101 -O0
+!i113 1
+R6
+n@m@u@l@t32
+vMULT32_U
+R36
+!i10b 1
+!s100 caT<^1?Si_`0^3_2[0`ER3
+IjTTUnGF=kh[@60E;5^gQS1
+R1
+R2
+R43
+R44
+R45
+L0 67
+R4
+r1
+!s85 0
+31
+R40
+R46
+R47
+!s101 -O0
+!i113 1
+R6
+n@m@u@l@t32_@u
+vmult_32x_and
+R36
+!i10b 1
+!s100 ]h6L4^BHGDjk^E9>4QF`R0
+Ia?:VEKe5fh^0bDH9a1[UH1
+R1
+R2
+R43
+R44
+R45
+L0 414
+R4
+r1
+!s85 0
+31
+R40
+R46
+R47
+!s101 -O0
+!i113 1
+R6
+vmult_tb
+R20
+!i10b 1
+!s100 _T3>V=mn>V^6RXDYkVnjY0
+Inf^Qi9;iXdfi8=^B64A211
+R1
+R2
+w1574662695
+8C:/Modelsim Projects/Project 3/mult_tb.v
+FC:/Modelsim Projects/Project 3/mult_tb.v
+L0 4
+R4
+r1
+!s85 0
+31
+R7
+!s107 prj_definition.v|C:/Modelsim Projects/Project 3/mult_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Modelsim Projects/Project 3/mult_tb.v|
+!s101 -O0
+!i113 1
+R6
+vMUX1_2x1
+R36
+!i10b 1
+!s100 [98bobE]<@^>IMaRNLgAk1
+I^_U1Aob>kE1FXUS380=XE2
+R1
+R2
+Z48 w1574503962
+Z49 8C:/Modelsim Projects/Project 3/mux.v
+Z50 FC:/Modelsim Projects/Project 3/mux.v
+L0 175
+R4
+r1
+!s85 0
+31
+R40
+Z51 !s107 C:/Modelsim Projects/Project 3/mux.v|
+Z52 !s90 -reportprogress|300|-work|work|-stats=none|C:/Modelsim Projects/Project 3/mux.v|
+!s101 -O0
+!i113 1
+R6
+n@m@u@x1_2x1
+vMUX32_16x1
+R36
+!i10b 1
+!s100 h4PANF9kzSG1=`eOfaU<z2
+IC=]W2E?aNIACSm1bf^@6n3
+R1
+R2
+R48
+R49
+R50
+L0 44
+R4
+r1
+!s85 0
+31
+R40
+R51
+R52
+!s101 -O0
+!i113 1
+R6
+n@m@u@x32_16x1
+vMUX32_2x1
+R36
+!i10b 1
+!s100 [c7DX1aR3b>TiiT34:XFK0
+IeR3mEH]b<?8VhJ0W==F>=3
+R1
+R2
+R48
+R49
+R50
+L0 131
+R4
+r1
+!s85 0
+31
+R40
+R51
+R52
+!s101 -O0
+!i113 1
+R6
+n@m@u@x32_2x1
+vMUX32_32x1
+R36
+!i10b 1
+!s100 ]aV[jgd`fLS^iYkJU=?Dh1
+ICzVl?PQl=l^@4he:i1EP^2
+R1
+R2
+R48
+R49
+R50
+Z53 L0 17
+R4
+r1
+!s85 0
+31
+R40
+R51
+R52
+!s101 -O0
+!i113 1
+R6
+n@m@u@x32_32x1
+vMUX32_4x1
+R36
+!i10b 1
+!s100 D5dnlT=Rf2hfF45PnROEn1
+I=WVg=TR2O2_BEP]W0JXU90
+R1
+R2
+R48
+R49
+R50
+L0 108
+R4
+r1
+!s85 0
+31
+R40
+R51
+R52
+!s101 -O0
+!i113 1
+R6
+n@m@u@x32_4x1
+vMUX32_8x1
+R36
+!i10b 1
+!s100 0CPe6fiiHbN1NHco[4;en3
+I=W_`zL1N1TfK7HLj4?B2c0
+R1
+R2
+R48
+R49
+R50
+L0 80
+R4
+r1
+!s85 0
+31
+R40
+R51
+R52
+!s101 -O0
+!i113 1
+R6
+n@m@u@x32_8x1
+vmux_tb
+R20
+!i10b 1
+!s100 e3Ch[Q73@@bgL[_V3JKU91
+I4OJn0PQAQcM=RE<AZ@B<92
+R1
+R2
+w1574672480
+8C:/Modelsim Projects/Project 3/mux_tb.v
+FC:/Modelsim Projects/Project 3/mux_tb.v
+L0 4
+R4
+r1
+!s85 0
+31
+R7
+!s107 prj_definition.v|C:/Modelsim Projects/Project 3/mux_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Modelsim Projects/Project 3/mux_tb.v|
+!s101 -O0
+!i113 1
+R6
+vNOR32_2x1
+R8
+!i10b 1
+!s100 [c`hfOW?TGZ37?l_mM^1?0
+I:ddG];<7Vf9Q@h@9KOSWV2
+R1
+R2
+R9
+R10
+R11
+L0 18
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!s101 -O0
+!i113 1
+R6
+n@n@o@r32_2x1
+vOR32_2x1
+R8
+!i10b 1
+!s100 A2V`9fP0_Vj?ljNOjbN@83
+I<Q53a`8fWdb;]l^;MLkL_0
+R1
+R2
+R9
+R10
+R11
+L0 119
+R4
+r1
+!s85 0
+31
+R12
+R13
+R14
+!s101 -O0
+!i113 1
+R6
+n@o@r32_2x1
+vPROC_CS147_SEC05
+R36
+!i10b 1
+!s100 VY9:L2cMX3;DK2FQTog=G3
+IVWd^80jZ_UP@6_DVJPokQ2
+R1
+R2
+R21
+8C:/Modelsim Projects/Project 3/processor.v
+FC:/Modelsim Projects/Project 3/processor.v
+R37
+R4
+r1
+!s85 0
+31
+R40
+!s107 prj_definition.v|C:/Modelsim Projects/Project 3/processor.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Modelsim Projects/Project 3/processor.v|
+!s101 -O0
+!i113 1
+R6
+n@p@r@o@c_@c@s147_@s@e@c05
+vPROC_SM
+R0
+!i10b 1
+!s100 >C78l=;=jZ]Vz@ZlzPmVI3
+I4>D`QIz6^]`dITgJQ@k9>0
+R1
+R2
+R21
+R23
+R24
+Z54 L0 53
+R4
+r1
+!s85 0
+31
+R5
+R26
+R27
+!s101 -O0
+!i113 1
+R6
+n@p@r@o@c_@s@m
+vRC_ADD_SUB_32
+R36
+!i10b 1
+!s100 6L2zzkj8maPJeih2nBWQF3
+IKEE=GEDV5JPPD;[P@<[Fa3
+R1
+R2
+Z55 w1574640915
+Z56 8C:/Modelsim Projects/Project 3/rc_add_sub_32.v
+Z57 FC:/Modelsim Projects/Project 3/rc_add_sub_32.v
+L0 301
+R4
+r1
+!s85 0
+31
+R40
+Z58 !s107 prj_definition.v|C:/Modelsim Projects/Project 3/rc_add_sub_32.v|
+Z59 !s90 -reportprogress|300|-work|work|-stats=none|C:/Modelsim Projects/Project 3/rc_add_sub_32.v|
+!s101 -O0
+!i113 1
+R6
+n@r@c_@a@d@d_@s@u@b_32
+vrc_add_sub_32_tb
+R20
+!i10b 1
+!s100 8LGPWg94Y?i@B2oN9Gg:=2
+IM:^9nCB2WIhj^OUUeg`YF0
+R1
+R2
+w1574649399
+8C:/Modelsim Projects/Project 3/rc_add_sub_32_tb.v
+FC:/Modelsim Projects/Project 3/rc_add_sub_32_tb.v
+L0 4
+R4
+r1
+!s85 0
+31
+R7
+!s107 prj_definition.v|C:/Modelsim Projects/Project 3/rc_add_sub_32_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Modelsim Projects/Project 3/rc_add_sub_32_tb.v|
+!s101 -O0
+!i113 1
+R6
+vRC_ADD_SUB_64
+R36
+!i10b 1
+!s100 <m]fGmOGHDfFbC]3UO[Ui2
+IDbL:meSa9X;fE3c:NlPeg1
+R1
+R2
+R55
+R56
+R57
+R37
+R4
+r1
+!s85 0
+31
+R40
+R58
+R59
+!s101 -O0
+!i113 1
+R6
+n@r@c_@a@d@d_@s@u@b_64
+vREG1
+R28
+!i10b 1
+!s100 BP?Mo0m@=2z`ZJ4hjnb0k0
+IP:X@6b:PeQRlmo^oBV=ie2
+R1
+R2
+R29
+R30
+R31
+L0 104
+R4
+r1
+!s85 0
+31
+R32
+R33
+R34
+!s101 -O0
+!i113 1
+R6
+n@r@e@g1
+vREG32
+R28
+!i10b 1
+!s100 mQ6HL>L?<`C4d[_GzR^?83
+I>3eboii=0AX;<o3;8m3hY2
+R1
+R2
+R29
+R30
+R31
+R54
+R4
+r1
+!s85 0
+31
+R32
+R33
+R34
+!s101 -O0
+!i113 1
+R6
+n@r@e@g32
+vREGISTER_FILE_32x32
+R36
+!i10b 1
+!s100 09_oJ;]1Ql=GC3^MVUV3Y3
+IlE[]LbSMBGEFBzfgjgoi<2
+R1
+R2
+w1574598101
+8C:/Modelsim Projects/Project 3/register_file.v
+FC:/Modelsim Projects/Project 3/register_file.v
+L0 32
+R4
+r1
+!s85 0
+31
+R40
+!s107 prj_definition.v|C:/Modelsim Projects/Project 3/register_file.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Modelsim Projects/Project 3/register_file.v|
+!s101 -O0
+!i113 1
+R6
+n@r@e@g@i@s@t@e@r_@f@i@l@e_32x32
+vRF_TB
+!s110 1574683887
+!i10b 1
+!s100 ;R`Jc<?0khIgjCLD=8C1f3
+I`]3^5A_7OQE5e??Ye`zAB1
+R1
+R2
+w1574683865
+8C:/Modelsim Projects/Project 3/register_file_tb.v
+FC:/Modelsim Projects/Project 3/register_file_tb.v
+R37
+R4
+r1
+!s85 0
+31
+!s108 1574683887.000000
+!s107 prj_definition.v|C:/Modelsim Projects/Project 3/register_file_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Modelsim Projects/Project 3/register_file_tb.v|
+!s101 -O0
+!i113 1
+R6
+n@r@f_@t@b
+vSHIFT32
+R0
+!i10b 1
+!s100 bcj[TAON@^H]_TPRkl2NL0
+I>5Rai06DNIbfE4=L^oL0Y0
+R1
+R2
+R15
+R16
+R17
+R22
+R4
+r1
+!s85 0
+31
+R5
+R18
+R19
+!s101 -O0
+!i113 1
+R6
+n@s@h@i@f@t32
+vSHIFT32_L
+R0
+!i10b 1
+!s100 z?j<2VaK[z69f;00omQ?D3
+Ie5N1ROFAc`:7]^@_g>egC3
+R1
+R2
+R15
+R16
+R17
+L0 426
+R4
+r1
+!s85 0
+31
+R5
+R18
+R19
+!s101 -O0
+!i113 1
+R6
+n@s@h@i@f@t32_@l
+vSHIFT32_R
+R0
+!i10b 1
+!s100 G3T930:aX`j@dRndEk<Yd2
+IZoJfN>ea:TWZlQmed3An^3
+R1
+R2
+R15
+R16
+R17
+L0 115
+R4
+r1
+!s85 0
+31
+R5
+R18
+R19
+!s101 -O0
+!i113 1
+R6
+n@s@h@i@f@t32_@r
+vSR_LATCH
+R28
+!i10b 1
+!s100 QMU<AZbFhjzGJkJn]<2PI0
+IhgWjfhHBOAYO74ezUl0`f1
+R1
+R2
+R29
+R30
+R31
+L0 186
+R4
+r1
+!s85 0
+31
+R32
+R33
+R34
+!s101 -O0
+!i113 1
+R6
+n@s@r_@l@a@t@c@h
+vTWOSCOMP32
+R28
+!i10b 1
+!s100 NB:hJTgP0l]_;l3j?c@<Z2
+I4Sm?2=iaUmMkln<=9SoNC1
+R1
+R2
+R29
+R30
+R31
+L0 35
+R4
+r1
+!s85 0
+31
+R32
+R33
+R34
+!s101 -O0
+!i113 1
+R6
+n@t@w@o@s@c@o@m@p32
+vTWOSCOMP64
+R28
+!i10b 1
+!s100 2;H;I>??NM7VLBb35TfWN3
+I8e2o6;@6CE0T0;?5MdQX`0
+R1
+R2
+R29
+R30
+R31
+R53
+R4
+r1
+!s85 0
+31
+R32
+R33
+R34
+!s101 -O0
+!i113 1
+R6
+n@t@w@o@s@c@o@m@p64

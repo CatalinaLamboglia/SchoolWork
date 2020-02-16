@@ -1,0 +1,169 @@
+// Name: register_file.v
+// Module: REGISTER_FILE_32x32
+// Input:  DATA_W : Data to be written at address ADDR_W
+//         ADDR_W : Address of the memory location to be written
+//         ADDR_R1 : Address of the memory location to be read for DATA_R1
+//         ADDR_R2 : Address of the memory location to be read for DATA_R2
+//         READ    : Read signal
+//         WRITE   : Write signal
+//         CLK     : Clock signal
+//         RST     : Reset signal
+// Output: DATA_R1 : Data at ADDR_R1 address
+//         DATA_R2 : Data at ADDR_R1 address
+//
+// Notes: - 32 bit word accessible dual read register file having 32 regsisters.
+//        - Reset is done at -ve edge of the RST signal
+//        - Rest of the operation is done at the +ve edge of the CLK signal
+//        - Read operation is done if READ=1 and WRITE=0
+//        - Write operation is done if WRITE=1 and READ=0
+//        - X is the value at DATA_R* if both READ and WRITE are 0 or 1
+//
+// Revision History:
+//
+// Version	Date		Who		email			note
+//------------------------------------------------------------------------------------------
+//  1.0     Sep 10, 2014	Kaushik Patra	kpatra@sjsu.edu		Initial creation
+//------------------------------------------------------------------------------------------
+//
+`include "prj_definition.v"
+
+// This is going to be +ve edge clock triggered register file.
+// Reset on RST=0
+module REGISTER_FILE_32x32(DATA_R1, DATA_R2, ADDR_R1, ADDR_R2, 
+                            DATA_W, ADDR_W, READ, WRITE, CLK, RST);
+
+// input list
+input READ, WRITE, CLK, RST;
+input [`DATA_INDEX_LIMIT:0] DATA_W;
+input [`REG_ADDR_INDEX_LIMIT:0] ADDR_R1, ADDR_R2, ADDR_W;
+
+// output list
+output [`DATA_INDEX_LIMIT:0] DATA_R1;
+output [`DATA_INDEX_LIMIT:0] DATA_R2;
+
+// TBD
+wire [31:0] L;
+wire [31:0] D;
+
+wire [31:0] Data_0;
+wire [31:0] Data_1;
+wire [31:0] Data_2;
+wire [31:0] Data_3;
+wire [31:0] Data_4;
+wire [31:0] Data_5;
+wire [31:0] Data_6;
+wire [31:0] Data_7;
+wire [31:0] Data_8;
+wire [31:0] Data_9;
+wire [31:0] Data_10;
+wire [31:0] Data_11;
+wire [31:0] Data_12;
+wire [31:0] Data_13;
+wire [31:0] Data_14;
+wire [31:0] Data_15;
+wire [31:0] Data_16;
+wire [31:0] Data_17;
+wire [31:0] Data_18;
+wire [31:0] Data_19;
+wire [31:0] Data_20;
+wire [31:0] Data_21;
+wire [31:0] Data_22;
+wire [31:0] Data_23;
+wire [31:0] Data_24;
+wire [31:0] Data_25;
+wire [31:0] Data_26;
+wire [31:0] Data_27;
+wire [31:0] Data_28;
+wire [31:0] Data_29;
+wire [31:0] Data_30;
+wire [31:0] Data_31;
+
+wire [31:0] Read_Data_0;
+wire [31:0] Read_Data_1;
+
+wire [31:0] HiZ;
+assign HiZ = 32'bZ;
+
+//module REG32(Q, D, LOAD, CLK, RESET);
+DECODER_5x32 decoder_5x32(.D(D),.I(ADDR_W));
+
+and and0(L[0], D[0], WRITE);
+and and1(L[1], D[1], WRITE);
+and and2(L[2], D[2], WRITE);
+and and3(L[3], D[3], WRITE);
+and and4(L[4], D[4], WRITE);
+and and5(L[5], D[5], WRITE);
+and and6(L[6], D[6], WRITE);
+and and7(L[7], D[7], WRITE);
+and and8(L[8], D[8], WRITE);
+and and9(L[9], D[9], WRITE);
+and and10(L[10], D[10], WRITE);
+and and11(L[11], D[11], WRITE);
+and and12(L[12], D[12], WRITE);
+and and13(L[13], D[13], WRITE);
+and and14(L[14], D[14], WRITE);
+and and15(L[15], D[15], WRITE);
+and and16(L[16], D[16], WRITE);
+and and17(L[17], D[17], WRITE);
+and and18(L[18], D[18], WRITE);
+and and19(L[19], D[19], WRITE);
+and and20(L[20], D[20], WRITE);
+and and21(L[21], D[21], WRITE);
+and and22(L[22], D[22], WRITE);
+and and23(L[23], D[23], WRITE);
+and and24(L[24], D[24], WRITE);
+and and25(L[25], D[25], WRITE);
+and and26(L[26], D[26], WRITE);
+and and27(L[27], D[27], WRITE);
+and and28(L[28], D[28], WRITE);
+and and29(L[29], D[29], WRITE);
+and and30(L[30], D[30], WRITE);
+and and31(L[31], D[31], WRITE);
+
+REG32 reg_0(.Q(Data_0), .D(DATA_W), .LOAD(L[0]), .CLK(CLK), .RESET(RST));
+REG32 reg_1(.Q(Data_1), .D(DATA_W), .LOAD(L[1]), .CLK(CLK), .RESET(RST));
+REG32 reg_2(.Q(Data_2), .D(DATA_W), .LOAD(L[2]), .CLK(CLK), .RESET(RST));
+REG32 reg_3(.Q(Data_3), .D(DATA_W), .LOAD(L[3]), .CLK(CLK), .RESET(RST));
+REG32 reg_4(.Q(Data_4), .D(DATA_W), .LOAD(L[4]), .CLK(CLK), .RESET(RST));
+REG32 reg_5(.Q(Data_5), .D(DATA_W), .LOAD(L[5]), .CLK(CLK), .RESET(RST));
+REG32 reg_6(.Q(Data_6), .D(DATA_W), .LOAD(L[6]), .CLK(CLK), .RESET(RST));
+REG32 reg_7(.Q(Data_7), .D(DATA_W), .LOAD(L[7]), .CLK(CLK), .RESET(RST));
+REG32 reg_8(.Q(Data_8), .D(DATA_W), .LOAD(L[8]), .CLK(CLK), .RESET(RST));
+REG32 reg_9(.Q(Data_9), .D(DATA_W), .LOAD(L[9]), .CLK(CLK), .RESET(RST));
+REG32 reg_10(.Q(Data_10), .D(DATA_W), .LOAD(L[10]), .CLK(CLK), .RESET(RST));
+REG32 reg_11(.Q(Data_11), .D(DATA_W), .LOAD(L[11]), .CLK(CLK), .RESET(RST));
+REG32 reg_12(.Q(Data_12), .D(DATA_W), .LOAD(L[12]), .CLK(CLK), .RESET(RST));
+REG32 reg_13(.Q(Data_13), .D(DATA_W), .LOAD(L[13]), .CLK(CLK), .RESET(RST));
+REG32 reg_14(.Q(Data_14), .D(DATA_W), .LOAD(L[14]), .CLK(CLK), .RESET(RST));
+REG32 reg_15(.Q(Data_15), .D(DATA_W), .LOAD(L[15]), .CLK(CLK), .RESET(RST));
+REG32 reg_16(.Q(Data_16), .D(DATA_W), .LOAD(L[16]), .CLK(CLK), .RESET(RST));
+REG32 reg_17(.Q(Data_17), .D(DATA_W), .LOAD(L[17]), .CLK(CLK), .RESET(RST));
+REG32 reg_18(.Q(Data_18), .D(DATA_W), .LOAD(L[18]), .CLK(CLK), .RESET(RST));
+REG32 reg_19(.Q(Data_19), .D(DATA_W), .LOAD(L[19]), .CLK(CLK), .RESET(RST));
+REG32 reg_20(.Q(Data_20), .D(DATA_W), .LOAD(L[20]), .CLK(CLK), .RESET(RST));
+REG32 reg_21(.Q(Data_21), .D(DATA_W), .LOAD(L[21]), .CLK(CLK), .RESET(RST));
+REG32 reg_22(.Q(Data_22), .D(DATA_W), .LOAD(L[22]), .CLK(CLK), .RESET(RST));
+REG32 reg_23(.Q(Data_23), .D(DATA_W), .LOAD(L[23]), .CLK(CLK), .RESET(RST));
+REG32 reg_24(.Q(Data_24), .D(DATA_W), .LOAD(L[24]), .CLK(CLK), .RESET(RST));
+REG32 reg_25(.Q(Data_25), .D(DATA_W), .LOAD(L[25]), .CLK(CLK), .RESET(RST));
+REG32 reg_26(.Q(Data_26), .D(DATA_W), .LOAD(L[26]), .CLK(CLK), .RESET(RST));
+REG32 reg_27(.Q(Data_27), .D(DATA_W), .LOAD(L[27]), .CLK(CLK), .RESET(RST));
+REG32 reg_28(.Q(Data_28), .D(DATA_W), .LOAD(L[28]), .CLK(CLK), .RESET(RST));
+REG32 reg_29(.Q(Data_29), .D(DATA_W), .LOAD(L[29]), .CLK(CLK), .RESET(RST));
+REG32 reg_30(.Q(Data_30), .D(DATA_W), .LOAD(L[30]), .CLK(CLK), .RESET(RST));
+REG32 reg_31(.Q(Data_31), .D(DATA_W), .LOAD(L[31]), .CLK(CLK), .RESET(RST));
+
+MUX32_32x1 mux_32_0(.Y(Read_Data_0), .I0(Data_0), .I1(Data_1), .I2(Data_2), .I3(Data_3), .I4(Data_4), .I5(Data_5), .I6(Data_6), .I7(Data_7),
+                     .I8(Data_8), .I9(Data_9), .I10(Data_10), .I11(Data_11), .I12(Data_12), .I13(Data_13), .I14(Data_14), .I15(Data_15),
+                     .I16(Data_16), .I17(Data_17), .I18(Data_18), .I19(Data_19), .I20(Data_20), .I21(Data_21), .I22(Data_22), .I23(Data_23),
+                     .I24(Data_24), .I25(Data_25), .I26(Data_26), .I27(Data_27), .I28(Data_28), .I29(Data_29), .I30(Data_31), .I31(Data_31), .S(ADDR_R1));
+
+MUX32_32x1 mux_32_1(.Y(Read_Data_1), .I0(Data_0), .I1(Data_1), .I2(Data_2), .I3(Data_3), .I4(Data_4), .I5(Data_5), .I6(Data_6), .I7(Data_7),
+                     .I8(Data_8), .I9(Data_9), .I10(Data_10), .I11(Data_11), .I12(Data_12), .I13(Data_13), .I14(Data_14), .I15(Data_15),
+                     .I16(Data_16), .I17(Data_17), .I18(Data_18), .I19(Data_19), .I20(Data_20), .I21(Data_21), .I22(Data_22), .I23(Data_23),
+                     .I24(Data_24), .I25(Data_25), .I26(Data_26), .I27(Data_27), .I28(Data_28), .I29(Data_29), .I30(Data_31), .I31(Data_31), .S(ADDR_R2));
+
+MUX32_2x1 mux0(.Y(DATA_R1), .I0(HiZ), .I1(Read_Data_0), .S(READ));
+MUX32_2x1 mux1(.Y(DATA_R2), .I0(HiZ), .I1(Read_Data_1), .S(READ));
+
+endmodule

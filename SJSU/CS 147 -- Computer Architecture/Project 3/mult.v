@@ -1,0 +1,456 @@
+// Name: mult.v
+// Module: MULT32 , MULT32_U
+//
+// Output: HI: 32 higher bits
+//         LO: 32 lower bits
+//         
+//
+// Input: A : 32-bit input
+//        B : 32-bit input
+//
+// Notes: 32-bit multiplication
+// 
+//
+// Revision History:
+//
+// Version	Date		Who		email			note
+//------------------------------------------------------------------------------------------
+//  1.0     Sep 10, 2014	Kaushik Patra	kpatra@sjsu.edu		Initial creation
+//------------------------------------------------------------------------------------------
+`include "prj_definition.v"
+
+module MULT32(HI, LO, A, B);
+// output list
+output [31:0] HI;
+output [31:0] LO;
+// input list
+input [31:0] A;
+input [31:0] B;
+
+// TBD
+wire [31:0] A2;
+wire [31:0] B2;
+
+wire [31:0] selectedA;
+wire [31:0] selectedB;
+
+wire [31:0] tempHI;
+wire [31:0] tempLO;
+
+wire [31:0] HI2;
+wire [31:0] LO2;
+
+wire [63:0] intermediateResult;
+wire resultSelect;
+
+//module TWOSCOMP32(Y,A);
+TWOSCOMP32 compA(.Y(A2), .A(A));
+TWOSCOMP32 compB(.Y(B2), .A(B));
+
+//module MUX32_2x1(Y, I0, I1, S);
+MUX32_2x1 mux_mcnd(.Y(selectedA), .I0(A), .I1(A2), .S(A[31]));
+MUX32_2x1 mux_mplr(.Y(selectedB), .I0(B), .I1(B2), .S(B[31]));
+
+//module MULT32_U(HI, LO, A, B);
+MULT32_U mult(.HI(tempHI), .LO(tempLO), .A(selectedA), .B(selectedB));
+
+TWOSCOMP32 compHI(.Y(HI2), .A(tempHI));
+TWOSCOMP32 compLO(.Y(LO2), .A(tempLO));
+
+xor xor0(resultSelect, A[31], B[31]);
+
+MUX32_2x1 mux_first_64(.Y(LO), .I0(tempLO), .I1(LO2), .S(resultSelect));
+MUX32_2x1 mux_second_64(.Y(HI), .I0(tempHI), .I1(HI2), .S(resultSelect));
+
+endmodule
+
+module MULT32_U(HI, LO, A, B);
+// output list
+output [31:0] HI;
+output [31:0] LO;
+// input list
+input [31:0] A;
+input [31:0] B;
+
+// TBD
+
+
+//module mult_32x_and(R, A, B); template
+
+wire [31:0] B_ext0 = {32{B[0]}};
+wire [31:0] B_ext1 = {32{B[1]}};
+wire [31:0] B_ext2 = {32{B[2]}};
+wire [31:0] B_ext3 = {32{B[3]}};
+wire [31:0] B_ext4 = {32{B[4]}};
+wire [31:0] B_ext5 = {32{B[5]}};
+wire [31:0] B_ext6 = {32{B[6]}};
+wire [31:0] B_ext7 = {32{B[7]}};
+wire [31:0] B_ext8 = {32{B[8]}};
+wire [31:0] B_ext9 = {32{B[9]}};
+wire [31:0] B_ext10 = {32{B[10]}};
+wire [31:0] B_ext11 = {32{B[11]}};
+wire [31:0] B_ext12 = {32{B[12]}};
+wire [31:0] B_ext13 = {32{B[13]}};
+wire [31:0] B_ext14 = {32{B[14]}};
+wire [31:0] B_ext15 = {32{B[15]}};
+wire [31:0] B_ext16 = {32{B[16]}};
+wire [31:0] B_ext17 = {32{B[17]}};
+wire [31:0] B_ext18 = {32{B[18]}};
+wire [31:0] B_ext19 = {32{B[19]}};
+wire [31:0] B_ext20 = {32{B[20]}};
+wire [31:0] B_ext21 = {32{B[21]}};
+wire [31:0] B_ext22 = {32{B[22]}};
+wire [31:0] B_ext23 = {32{B[23]}};
+wire [31:0] B_ext24 = {32{B[24]}};
+wire [31:0] B_ext25 = {32{B[25]}};
+wire [31:0] B_ext26 = {32{B[26]}};
+wire [31:0] B_ext27 = {32{B[27]}};
+wire [31:0] B_ext28 = {32{B[28]}};
+wire [31:0] B_ext29 = {32{B[29]}};
+wire [31:0] B_ext30 = {32{B[30]}};
+wire [31:0] B_ext31 = {32{B[31]}};
+
+wire [31:0] andResult0;
+wire [31:0] andResult1;
+wire [31:0] andResult2;
+wire [31:0] andResult3;
+wire [31:0] andResult4;
+wire [31:0] andResult5;
+wire [31:0] andResult6;
+wire [31:0] andResult7;
+wire [31:0] andResult8;
+wire [31:0] andResult9;
+wire [31:0] andResult10;
+wire [31:0] andResult11;
+wire [31:0] andResult12;
+wire [31:0] andResult13;
+wire [31:0] andResult14;
+wire [31:0] andResult15;
+wire [31:0] andResult16;
+wire [31:0] andResult17;
+wire [31:0] andResult18;
+wire [31:0] andResult19;
+wire [31:0] andResult20;
+wire [31:0] andResult21;
+wire [31:0] andResult22;
+wire [31:0] andResult23;
+wire [31:0] andResult24;
+wire [31:0] andResult25;
+wire [31:0] andResult26;
+wire [31:0] andResult27;
+wire [31:0] andResult28;
+wire [31:0] andResult29;
+wire [31:0] andResult30;
+wire [31:0] andResult31;
+
+mult_32x_and and0(andResult0, A, B_ext0);
+mult_32x_and and1(andResult1, A, B_ext1);
+mult_32x_and and2(andResult2, A, B_ext2);
+mult_32x_and and3(andResult3, A, B_ext3);
+mult_32x_and and4(andResult4, A, B_ext4);
+mult_32x_and and5(andResult5, A, B_ext5);
+mult_32x_and and6(andResult6, A, B_ext6);
+mult_32x_and and7(andResult7, A, B_ext7);
+mult_32x_and and8(andResult8, A, B_ext8);
+mult_32x_and and9(andResult9, A, B_ext9);
+mult_32x_and and10(andResult10, A, B_ext10);
+mult_32x_and and11(andResult11, A, B_ext11);
+mult_32x_and and12(andResult12, A, B_ext12);
+mult_32x_and and13(andResult13, A, B_ext13);
+mult_32x_and and14(andResult14, A, B_ext14);
+mult_32x_and and15(andResult15, A, B_ext15);
+mult_32x_and and16(andResult16, A, B_ext16);
+mult_32x_and and17(andResult17, A, B_ext17);
+mult_32x_and and18(andResult18, A, B_ext18);
+mult_32x_and and19(andResult19, A, B_ext19);
+mult_32x_and and20(andResult20, A, B_ext20);
+mult_32x_and and21(andResult21, A, B_ext21);
+mult_32x_and and22(andResult22, A, B_ext22);
+mult_32x_and and23(andResult23, A, B_ext23);
+mult_32x_and and24(andResult24, A, B_ext24);
+mult_32x_and and25(andResult25, A, B_ext25);
+mult_32x_and and26(andResult26, A, B_ext26);
+mult_32x_and and27(andResult27, A, B_ext27);
+mult_32x_and and28(andResult28, A, B_ext28);
+mult_32x_and and29(andResult29, A, B_ext29);
+mult_32x_and and30(andResult30, A, B_ext30);
+mult_32x_and and31(andResult31, A, B_ext31);
+
+wire [31:0] adderRight0;
+wire [31:0] adderRight1;
+wire [31:0] adderRight2;
+wire [31:0] adderRight3;
+wire [31:0] adderRight4;
+wire [31:0] adderRight5;
+wire [31:0] adderRight6;
+wire [31:0] adderRight7;
+wire [31:0] adderRight8;
+wire [31:0] adderRight9;
+wire [31:0] adderRight10;
+wire [31:0] adderRight11;
+wire [31:0] adderRight12;
+wire [31:0] adderRight13;
+wire [31:0] adderRight14;
+wire [31:0] adderRight15;
+wire [31:0] adderRight16;
+wire [31:0] adderRight17;
+wire [31:0] adderRight18;
+wire [31:0] adderRight19;
+wire [31:0] adderRight20;
+wire [31:0] adderRight21;
+wire [31:0] adderRight22;
+wire [31:0] adderRight23;
+wire [31:0] adderRight24;
+wire [31:0] adderRight25;
+wire [31:0] adderRight26;
+wire [31:0] adderRight27;
+wire [31:0] adderRight28;
+wire [31:0] adderRight29;
+wire [31:0] adderRight30;
+wire [31:0] adderRight31;
+
+wire [31:0] adderResult0;
+wire [31:0] adderResult1;
+wire [31:0] adderResult2;
+wire [31:0] adderResult3;
+wire [31:0] adderResult4;
+wire [31:0] adderResult5;
+wire [31:0] adderResult6;
+wire [31:0] adderResult7;
+wire [31:0] adderResult8;
+wire [31:0] adderResult9;
+wire [31:0] adderResult10;
+wire [31:0] adderResult11;
+wire [31:0] adderResult12;
+wire [31:0] adderResult13;
+wire [31:0] adderResult14;
+wire [31:0] adderResult15;
+wire [31:0] adderResult16;
+wire [31:0] adderResult17;
+wire [31:0] adderResult18;
+wire [31:0] adderResult19;
+wire [31:0] adderResult20;
+wire [31:0] adderResult21;
+wire [31:0] adderResult22;
+wire [31:0] adderResult23;
+wire [31:0] adderResult24;
+wire [31:0] adderResult25;
+wire [31:0] adderResult26;
+wire [31:0] adderResult27;
+wire [31:0] adderResult28;
+wire [31:0] adderResult29;
+wire [31:0] adderResult30;
+//wire [31:0] adderResult31;
+
+wire adderCO0;
+wire adderCO1;
+wire adderCO2;
+wire adderCO3;
+wire adderCO4;
+wire adderCO5;
+wire adderCO6;
+wire adderCO7;
+wire adderCO8;
+wire adderCO9;
+wire adderCO10;
+wire adderCO11;
+wire adderCO12;
+wire adderCO13;
+wire adderCO14;
+wire adderCO15;
+wire adderCO16;
+wire adderCO17;
+wire adderCO18;
+wire adderCO19;
+wire adderCO20;
+wire adderCO21;
+wire adderCO22;
+wire adderCO23;
+wire adderCO24;
+wire adderCO25;
+wire adderCO26;
+wire adderCO27;
+wire adderCO28;
+wire adderCO29;
+wire adderCO30;
+wire adderCO31;
+
+assign LO[0] = andResult0[0];
+
+//module RC_ADD_SUB_32(Y, CO, A, B, SnA); template
+//RC_ADD_SUB_32 fa_inst_1(.Y(Y), .CO(CO), .A(A), .B(B), .SnA(SnA));
+
+assign adderRight0 = {1'b0,andResult0[31:1]}; // first case/adder only
+RC_ADD_SUB_32 adder_0(.Y(adderResult0), .CO(adderCO0), .A(adderRight0), .B(andResult1), .SnA(1'b0));
+assign LO[1] = adderResult0[0];
+
+assign adderRight1 = {adderCO0, adderResult0[31:1]};
+RC_ADD_SUB_32 adder_1(.Y(adderResult1), .CO(adderCO1), .A(adderRight1), .B(andResult2), .SnA(1'b0));
+assign LO[2] = adderResult1[0];
+
+assign adderRight2 = {adderCO1, adderResult1[31:1]};
+RC_ADD_SUB_32 adder_2(.Y(adderResult2), .CO(adderCO2), .A(adderRight2), .B(andResult3), .SnA(1'b0));
+assign LO[3] = adderResult2[0];
+
+assign adderRight3 = {adderCO2, adderResult2[31:1]};
+RC_ADD_SUB_32 adder_3(.Y(adderResult3), .CO(adderCO3), .A(adderRight3), .B(andResult4), .SnA(1'b0));
+assign LO[4] = adderResult3[0];
+
+assign adderRight4 = {adderCO3, adderResult3[31:1]};
+RC_ADD_SUB_32 adder_4(.Y(adderResult4), .CO(adderCO4), .A(adderRight4), .B(andResult5), .SnA(1'b0));
+assign LO[5] = adderResult4[0];
+
+assign adderRight5 = {adderCO4, adderResult4[31:1]};
+RC_ADD_SUB_32 adder_5(.Y(adderResult5), .CO(adderCO5), .A(adderRight5), .B(andResult6), .SnA(1'b0));
+assign LO[6] = adderResult5[0];
+
+assign adderRight6 = {adderCO5, adderResult5[31:1]};
+RC_ADD_SUB_32 adder_6(.Y(adderResult6), .CO(adderCO6), .A(adderRight6), .B(andResult7), .SnA(1'b0));
+assign LO[7] = adderResult6[0];
+
+assign adderRight7 = {adderCO6, adderResult6[31:1]};
+RC_ADD_SUB_32 adder_7(.Y(adderResult7), .CO(adderCO7), .A(adderRight7), .B(andResult8), .SnA(1'b0));
+assign LO[8] = adderResult7[0];
+
+assign adderRight8 = {adderCO7, adderResult7[31:1]};
+RC_ADD_SUB_32 adder_8(.Y(adderResult8), .CO(adderCO8), .A(adderRight8), .B(andResult9), .SnA(1'b0));
+assign LO[9] = adderResult8[0];
+
+assign adderRight9 = {adderCO8, adderResult8[31:1]};
+RC_ADD_SUB_32 adder_9(.Y(adderResult9), .CO(adderCO9), .A(adderRight9), .B(andResult10), .SnA(1'b0));
+assign LO[10] = adderResult9[0];
+
+assign adderRight10 = {adderCO9, adderResult9[31:1]};
+RC_ADD_SUB_32 adder_10(.Y(adderResult10), .CO(adderCO10), .A(adderRight10), .B(andResult11), .SnA(1'b0));
+assign LO[11] = adderResult10[0];
+
+assign adderRight11 = {adderCO10, adderResult10[31:1]};
+RC_ADD_SUB_32 adder_11(.Y(adderResult11), .CO(adderCO11), .A(adderRight11), .B(andResult12), .SnA(1'b0));
+assign LO[12] = adderResult11[0];
+
+assign adderRight12 = {adderCO11, adderResult11[31:1]};
+RC_ADD_SUB_32 adder_12(.Y(adderResult12), .CO(adderCO12), .A(adderRight12), .B(andResult13), .SnA(1'b0));
+assign LO[13] = adderResult12[0];
+
+assign adderRight13 = {adderCO12, adderResult12[31:1]};
+RC_ADD_SUB_32 adder_13(.Y(adderResult13), .CO(adderCO13), .A(adderRight13), .B(andResult14), .SnA(1'b0));
+assign LO[14] = adderResult13[0];
+
+assign adderRight14 = {adderCO13, adderResult13[31:1]};
+RC_ADD_SUB_32 adder_14(.Y(adderResult14), .CO(adderCO14), .A(adderRight14), .B(andResult15), .SnA(1'b0));
+assign LO[15] = adderResult14[0];
+
+assign adderRight15 = {adderCO14, adderResult14[31:1]};
+RC_ADD_SUB_32 adder_15(.Y(adderResult15), .CO(adderCO15), .A(adderRight15), .B(andResult16), .SnA(1'b0));
+assign LO[16] = adderResult15[0];
+
+assign adderRight16 = {adderCO15, adderResult15[31:1]};
+RC_ADD_SUB_32 adder_16(.Y(adderResult16), .CO(adderCO16), .A(adderRight16), .B(andResult17), .SnA(1'b0));
+assign LO[17] = adderResult16[0];
+
+assign adderRight17 = {adderCO16, adderResult16[31:1]};
+RC_ADD_SUB_32 adder_17(.Y(adderResult17), .CO(adderCO17), .A(adderRight17), .B(andResult18), .SnA(1'b0));
+assign LO[18] = adderResult17[0];
+
+assign adderRight18 = {adderCO17, adderResult17[31:1]};
+RC_ADD_SUB_32 adder_18(.Y(adderResult18), .CO(adderCO18), .A(adderRight18), .B(andResult19), .SnA(1'b0));
+assign LO[19] = adderResult18[0];
+
+assign adderRight19 = {adderCO18, adderResult18[31:1]};
+RC_ADD_SUB_32 adder_19(.Y(adderResult19), .CO(adderCO19), .A(adderRight19), .B(andResult20), .SnA(1'b0));
+assign LO[20] = adderResult19[0];
+
+assign adderRight20 = {adderCO19, adderResult19[31:1]};
+RC_ADD_SUB_32 adder_20(.Y(adderResult20), .CO(adderCO20), .A(adderRight20), .B(andResult21), .SnA(1'b0));
+assign LO[21] = adderResult20[0];
+
+assign adderRight21 = {adderCO20, adderResult20[31:1]};
+RC_ADD_SUB_32 adder_21(.Y(adderResult21), .CO(adderCO21), .A(adderRight21), .B(andResult22), .SnA(1'b0));
+assign LO[22] = adderResult21[0];
+
+assign adderRight22 = {adderCO21, adderResult21[31:1]};
+RC_ADD_SUB_32 adder_22(.Y(adderResult22), .CO(adderCO22), .A(adderRight22), .B(andResult23), .SnA(1'b0));
+assign LO[23] = adderResult22[0];
+
+assign adderRight23 = {adderCO22, adderResult22[31:1]};
+RC_ADD_SUB_32 adder_23(.Y(adderResult23), .CO(adderCO23), .A(adderRight23), .B(andResult24), .SnA(1'b0));
+assign LO[24] = adderResult23[0];
+
+assign adderRight24 = {adderCO23, adderResult23[31:1]};
+RC_ADD_SUB_32 adder_24(.Y(adderResult24), .CO(adderCO24), .A(adderRight24), .B(andResult25), .SnA(1'b0));
+assign LO[25] = adderResult24[0];
+
+assign adderRight25 = {adderCO24, adderResult24[31:1]};
+RC_ADD_SUB_32 adder_25(.Y(adderResult25), .CO(adderCO25), .A(adderRight25), .B(andResult26), .SnA(1'b0));
+assign LO[26] = adderResult25[0];
+
+assign adderRight26 = {adderCO25, adderResult25[31:1]};
+RC_ADD_SUB_32 adder_26(.Y(adderResult26), .CO(adderCO26), .A(adderRight26), .B(andResult27), .SnA(1'b0));
+assign LO[27] = adderResult26[0];
+
+assign adderRight27 = {adderCO26, adderResult26[31:1]};
+RC_ADD_SUB_32 adder_27(.Y(adderResult27), .CO(adderCO27), .A(adderRight27), .B(andResult28), .SnA(1'b0));
+assign LO[28] = adderResult27[0];
+
+assign adderRight28 = {adderCO27, adderResult27[31:1]};
+RC_ADD_SUB_32 adder_28(.Y(adderResult28), .CO(adderCO28), .A(adderRight28), .B(andResult29), .SnA(1'b0));
+assign LO[29] = adderResult28[0];
+
+assign adderRight29 = {adderCO28, adderResult28[31:1]};
+RC_ADD_SUB_32 adder_29(.Y(adderResult29), .CO(adderCO29), .A(adderRight29), .B(andResult30), .SnA(1'b0));
+assign LO[30] = adderResult29[0];
+
+assign adderRight30 = {adderCO29, adderResult29[31:1]};
+RC_ADD_SUB_32 adder_30(.Y(adderResult30), .CO(adderCO30), .A(adderRight30), .B(andResult31), .SnA(1'b0));
+assign LO[31] = adderResult30[0];
+assign HI = adderResult30;
+
+//assign adderRight31 = {adderCO30, adderResult30[31:1]};
+//RC_ADD_SUB_32 adder_31(.Y(adderResult31), .CO(adderCO31), .A(adderRight31), .B(andResult32), .SnA(1'b0));
+
+
+endmodule
+
+module mult_32x_and(R, A, B);
+// output list
+output [31:0] R;
+// input list
+input [31:0] A;
+input [31:0] B;
+
+//and and0(R[0], A[0], B[0]);
+
+and and0(R[0], A[0], B[0]);
+and and1(R[1], A[1], B[1]);
+and and2(R[2], A[2], B[2]);
+and and3(R[3], A[3], B[3]);
+and and4(R[4], A[4], B[4]);
+and and5(R[5], A[5], B[5]);
+and and6(R[6], A[6], B[6]);
+and and7(R[7], A[7], B[7]);
+and and8(R[8], A[8], B[8]);
+and and9(R[9], A[9], B[9]);
+and and10(R[10], A[10], B[10]);
+and and11(R[11], A[11], B[11]);
+and and12(R[12], A[12], B[12]);
+and and13(R[13], A[13], B[13]);
+and and14(R[14], A[14], B[14]);
+and and15(R[15], A[15], B[15]);
+and and16(R[16], A[16], B[16]);
+and and17(R[17], A[17], B[17]);
+and and18(R[18], A[18], B[18]);
+and and19(R[19], A[19], B[19]);
+and and20(R[20], A[20], B[20]);
+and and21(R[21], A[21], B[21]);
+and and22(R[22], A[22], B[22]);
+and and23(R[23], A[23], B[23]);
+and and24(R[24], A[24], B[24]);
+and and25(R[25], A[25], B[25]);
+and and26(R[26], A[26], B[26]);
+and and27(R[27], A[27], B[27]);
+and and28(R[28], A[28], B[28]);
+and and29(R[29], A[29], B[29]);
+and and30(R[30], A[30], B[30]);
+and and31(R[31], A[31], B[31]);
+
+endmodule

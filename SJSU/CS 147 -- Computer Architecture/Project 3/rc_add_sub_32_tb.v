@@ -1,0 +1,35 @@
+`timescale 1ns/1ps
+`include "prj_definition.v"
+
+module rc_add_sub_32_tb;
+reg SnA;
+wire CO, S;
+wire [31:0] Y;
+
+reg [31:0] A;
+reg [31:0] B;
+
+// module RC_ADD_SUB_32(Y, CO, A, B, SnA);
+RC_ADD_SUB_32 fa_inst_1(.Y(Y), .CO(CO), .A(A), .B(B), .SnA(SnA));
+
+initial 
+begin
+
+A=0; B=0; SnA=0;
+#5 A=1; B=0; SnA=0;
+#5 A=0; B=0; SnA=0;
+#5 A=0; B=1; SnA=0;
+#5 A=0; B=0; SnA=1;
+
+
+#5 A=0; B=0; SnA=0;
+#5 A=10; B=0; SnA=0;
+#5 A=0; B=10; SnA=1;
+#5 A=100; B=100; SnA=1;
+#5 A=100; B=100; SnA=0;
+#5 A=32'b11111111111111111111111111111111; B=0; SnA=0;
+#5 A=0; B=32'b11111111111111111111111111111111; SnA=0;
+#5 ;
+end
+
+endmodule
