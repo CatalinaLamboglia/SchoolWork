@@ -1,0 +1,42 @@
+# Reading C:/Modeltech_pe_edu_10.4a/tcl/vsim/pref.tcl
+# OpenFile {C:/Modelsim Projects/Project 1/prj_01_tb.v}
+project open {C:/Modelsim Projects/Project 2/Project_2}
+# Loading project Project_2
+# Compile of register_file.v was successful.
+# Compile of alu.v failed with 1 errors.
+# Compile of clk_gen.v was successful with warnings.
+# Compile of control_unit.v was successful with warnings.
+# Compile of da_vinci.v was successful with warnings.
+# Compile of da_vinci_tb.v was successful with warnings.
+# Compile of mem_64MB_tb.v was successful with warnings.
+# Compile of memory.v was successful.
+# Compile of prj_definition.v was successful.
+# Compile of processor.v was successful with warnings.
+# Compile of alu_tb.v was successful.
+# 11 compiles, 1 failed with 1 error.
+# Compile of alu.v failed with 1 errors.
+# Compile of alu.v failed with 1 errors.
+# Compile of alu.v failed with 1 errors.
+# Compile of alu.v failed with 1 errors.
+# Compile of alu.v failed with 1 errors.
+# Error opening C:/Modelsim Projects/Project 2/(vlog-13069) C:/Modelsim Projects/Project 2/alu.v
+# Path name 'C:/Modelsim Projects/Project 2/(vlog-13069) C:/Modelsim Projects/Project 2/alu.v' doesn't exist.
+# Error opening C:/Modelsim Projects/Project 2/(vlog-13069) C:/Modelsim Projects/Project 2/alu.v
+# Path name 'C:/Modelsim Projects/Project 2/(vlog-13069) C:/Modelsim Projects/Project 2/alu.v' doesn't exist.
+# Compile of alu.v failed with 1 errors.
+# Compile of alu.v failed with 1 errors.
+# Compile of alu.v failed with 1 errors.
+# Compile of alu.v failed with 1 errors.
+# Error opening C:/Modelsim Projects/Project 2/(vlog-13069) C:/Modelsim Projects/Project 2/alu.v
+# Path name 'C:/Modelsim Projects/Project 2/(vlog-13069) C:/Modelsim Projects/Project 2/alu.v' doesn't exist.
+# Error opening C:/Modelsim Projects/Project 2/(vlog-13069) C:/Modelsim Projects/Project 2/alu.v
+# Path name 'C:/Modelsim Projects/Project 2/(vlog-13069) C:/Modelsim Projects/Project 2/alu.v' doesn't exist.
+# Compile of alu.v failed with 1 errors.
+# Compile of memory.v was successful.
+# Compile of alu.v failed with 1 errors.
+# Compile of alu.v failed with 1 errors.
+# Compile of alu.v failed with 1 errors.
+# Compile of alu.v failed with 1 errors.
+# Compile of alu.v failed with 1 errors.
+# Compile of alu.v failed with 1 errors.
+# Quit canceled
