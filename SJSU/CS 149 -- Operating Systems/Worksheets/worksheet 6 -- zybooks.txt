@@ -1,0 +1,127 @@
+#include <stdio.h>
+#include <string.h> 
+// algorith: create a copied reverse string, compare each character of each string
+// in a for loop, ignore spaces/whitespace, if any character does not match its not a palindrome
+// if the loop completes with no errors, it's a palindrome --> make a boolean value as false only if terminating early
+// print statement prints based on that boolean
+
+
+void ReverseString(char inputString[], char reversedString[])
+{
+      int length = 0;
+      while (inputString[length] != '\0')
+         length++;
+      
+      int endToCopy = length - 1;
+      
+      int i;
+      for(i = 0; i < length; i++)
+      {
+          reversedString[i] = inputString[endToCopy];
+          endToCopy--;
+      }
+      reversedString[i] = '\0'; //replace end character
+     // printf("%s\n", reversedString);
+}
+
+
+int main(void) {
+
+   /* Type your code here. */
+   char string[50];
+   char reverse[50];
+   char space = ' ';
+   
+   fgets(string, 50, stdin);
+   
+   ReverseString(string, reverse);
+   
+   int length = 0;
+   while (string[length] != '\0')
+      length++;
+   int pali = 1; // bool not working
+   
+   int revI = 0, stringI = 0; // indexes to ensure not comparing blank space
+   for(int i = 0; i < length; i++)
+   {
+      //remove blank spaces before comparison
+      while (revI < 50 && strcmp(reverse[revI], space) == 0)
+      {
+          revI++; 
+      }
+      while (stringI < 50 && strcmp(string[stringI], space) == 0)
+      {
+          stringI++; 
+      }
+      
+      if (strcmp(reverse[revI], string[stringI]) != 0)
+      {
+         pali = 0;
+         i = 999999; //break
+      }
+   }
+   
+   if (pali == 1)
+       printf("%s is a palindrome\n", string);
+   else
+       printf("%s is not a palindrome\n", string);
+
+   return 0;
+}
+
+-----------------
+#include <stdio.h>
+
+void SortArray(int sortingList[], int numVals)
+{
+   //bubble sort
+   int temp;
+  // int first; // test var
+   for(int i = 0; i < numVals; i++)
+   {
+      for (int j = 0; j < numVals; j++)
+      {
+         if (j + 1 < numVals && sortingList[j] > sortingList[j + 1]) // swap
+         {
+           // first = userVals[j];
+            temp = sortingList[j+1];
+            sortingList[j+1] = sortingList[j];
+            sortingList[j] = temp;
+           // printf("swap %d with %d at j = %d \n", first, temp, j);
+         }
+      }
+   } 
+}
+
+int main(void) {
+
+   /* Type your code here. */
+   const int NUM_ELEMENTS = 20;         // Number of input integers
+   int userVals[NUM_ELEMENTS];          // Array to hold the user's input integers
+
+   /* Type your code here. */
+   int count = 0;
+   scanf("%d", &count);
+   
+   if (count > NUM_ELEMENTS)
+   {
+       count = NUM_ELEMENTS;
+   }
+   
+   for (int i = 0; i < count; i++)
+   {
+       scanf("%d", &userVals[i]);
+   }
+   
+   SortArray(userVals, count);
+   
+   for(int i = 0; i < count; i++)
+   {
+       printf("%d ",userVals[i]);
+   }
+   printf("\n");
+
+   return 0;
+}
+
+

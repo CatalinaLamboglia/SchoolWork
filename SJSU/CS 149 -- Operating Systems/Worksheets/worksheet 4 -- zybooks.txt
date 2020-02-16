@@ -1,0 +1,73 @@
+#include <stdio.h>
+
+/* Define your function here */ 
+double MilesToLaps(double userMiles) 
+{
+   double laps;  // Resulting laps
+   
+   laps = userMiles * 4;
+   
+   return laps;
+}
+
+int main(void) {
+
+   /* Type your code here. Your code must call the function.  */
+   double miles;
+   scanf("%lf", &miles);
+   
+   double laps = MilesToLaps(miles);
+   
+   printf("%0.2lf\n", laps);
+
+   return 0;
+}
+
+--------------
+#include <stdio.h>
+
+/* Define your function here */ 
+int LargestNumber(int userNum1, int userNum2, int userNum3)
+{
+   int largest = userNum1;
+   if(largest >= userNum2 && largest >= userNum3) {}
+   else if (userNum2 > largest && userNum2 >= userNum3)
+   {
+      largest = userNum2;
+   }
+   else
+       largest = userNum3;
+   
+   return largest;
+}
+
+int SmallestNumber(int userNum1, int userNum2, int userNum3)
+{
+   int smallest = userNum1;
+   if(smallest <= userNum2 && smallest <= userNum3) {}
+   else if (userNum2 < smallest && userNum2 <= userNum3)
+   {
+      smallest = userNum2;
+   }
+   else
+   {
+       smallest = userNum3;
+   }
+   
+   return smallest;
+}
+
+int main(void) {
+
+   /* Type your code here. Your code must call the function.  */
+   int a,b,c;
+   scanf("%d %d %d", &a, &b, &c);
+   int largest = LargestNumber(a, b, c);
+   int smallest = SmallestNumber(a,b,c);
+   
+   printf("largest: %d\n", largest);
+   printf("smallest: %d\n", smallest);
+
+   return 0;
+}
+---------------

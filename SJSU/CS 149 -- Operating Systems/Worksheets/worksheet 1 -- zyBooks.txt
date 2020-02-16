@@ -1,0 +1,127 @@
+#include <stdio.h>
+
+int main(void) {
+
+   /* Type your code here. */
+   printf("Hello World!\n");
+
+   return 0;
+}
+
+
+
+#include <stdio.h>
+
+int main(void) {
+
+   /* Type your code here. */
+   printf("  NO PARKING\n");
+   printf("2:00 - 6:00 a.m.\n");
+
+   return 0;
+}
+
+
+#include <stdio.h>
+
+int main(void) {
+   int baseInt;
+   int headInt;
+   
+   //baseInt = 0;
+  // headInt = 1;
+  scanf("%d", &baseInt);
+  scanf("%d", &headInt);
+   
+   /* Type your code here. */
+   printf("    %d\n", headInt);
+   printf("    %d", headInt);
+   printf("%d\n", headInt);
+   
+   int i;
+   for(i = 0; i < 4; i++)
+       printf("%d",baseInt);
+   for(i = 0; i < 3; i++)
+       printf("%d",headInt);
+       
+   printf("\n");
+       
+   for(i = 0; i < 4; i++)
+       printf("%d",baseInt);
+   for(i = 0; i < 4; i++)
+       printf("%d",headInt);
+
+   printf("\n");
+       
+   for(i = 0; i < 4; i++)
+       printf("%d",baseInt);
+   for(i = 0; i < 3; i++)
+       printf("%d",headInt);
+       
+   printf("\n");
+
+   printf("    %d", headInt);
+   printf("%d\n", headInt);
+
+   printf("    %d\n", headInt);
+
+   return 0;
+}
+
+
+#include <stdio.h>
+
+int main(void) {
+
+   /* Type your code here. */
+   printf("Hello world!\n");
+   printf("How are you?\n");
+   printf("   (I'm fine).\n");
+
+   return 0;
+}
+
+#include <stdio.h>
+
+int main(void) {
+   int userNum;
+   int userNum1;
+   
+   printf("Enter integer:\n");
+   scanf("%d", &userNum);
+   /* Type your code here. */
+   
+   printf("You entered: %d\n", userNum);
+   printf("%d squared is %d\n", userNum, userNum * userNum);
+   printf("And %d cubed is %d!!\n", userNum, userNum * userNum * userNum);
+   
+   printf("Enter another integer:\n");
+   scanf("%d", &userNum1);
+   
+   printf("%d + %d is %d\n", userNum, userNum1, userNum+userNum1);
+   printf("%d * %d is %d\n", userNum, userNum1, userNum * userNum1);
+
+   return 0;
+}
+
+#include <stdio.h>
+
+int main(void) {
+   // Draw tree
+   printf("   *\n");
+   printf("  ***\n");
+   /* Type your code here. */
+   printf(" *****\n");
+   printf("*******\n");
+   printf("  ***\n");
+   
+   printf("\n");
+   printf("\n");
+   
+   printf("/\\   /\\\n");
+   printf("  o o\n");
+   printf(" =   =\n");
+   printf("  ---\n");
+
+   return 0;
+}

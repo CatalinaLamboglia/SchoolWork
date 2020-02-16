@@ -1,0 +1,112 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+
+   /* Type your code here. */
+   // has an out of bounds error -- doesnt work
+   // error suspected at line 32: reverse[i] = string[endToCopy];
+   char quit[] = "quit", Quit[] = "Quit", q[] = "q";
+   char string[50];
+   int length = 0;
+   int endToCopy;
+   
+   fgets(string, 50, stdin);
+   
+  // printf("%s\n", string); // test statement
+  // gets(string); //use fgets instead, gets is deprecated
+   
+   // handle first case
+   
+   while (string[length] != '\0' || string[length] != '\n') // find end of word/line
+      length++;
+   
+   char reverse[length];
+   endToCopy = length - 1; 
+   
+   while(strcmp(quit, string) != 0 || strcmp(Quit, string) != 0 || strcmp(q, string) != 0 )
+   {
+      int i;
+      for(i = 0; i < length; i++)
+      {
+          reverse[i] = string[endToCopy];
+          endToCopy--;
+      }
+      reverse[i] = '\0'; //replace end character
+      
+      printf("%s\n", reverse);
+      
+      fgets(string, 50, stdin); // get next line
+      
+      length = 0;
+      //length++;
+      while (string[length] != '\0' || string[length] != '\n') // find end of word/line
+          length++;
+   
+      char reverse[length];
+      endToCopy = length - 1; 
+   }
+
+   return 0;
+}
+---------------
+#include <stdio.h>
+#include <string.h> 
+  
+
+/* Define your functions here */ 
+// outputs junk characters, error somewhere in
+// ReverseString method
+
+
+void ReverseString(char inputString[], char reversedString[])
+{
+      int length = 0;
+      while (inputString[length] != '\0')
+         length++;
+      
+      int endToCopy = length - 1;
+      
+      int i;
+      for(i = 0; i < length; i++)
+      {
+          reversedString[i] = inputString[endToCopy];
+          endToCopy--;
+      }
+      reversedString[i] = '\0'; //replace end character
+     // printf("%s\n", reversedString);
+}
+
+void IntegerToReverseBinary(int integerValue, char binaryValue[])
+{
+   int length = 0;
+   while (integerValue > 0)
+   {
+       int bit = integerValue % 2;
+       char cBit = (char) bit;
+       strncat(binaryValue, &cBit, 1); 
+       integerValue = integerValue / 2;
+       length++;
+   }
+   char reverseBinary[length]; // make a copy for reverse method
+   
+   ReverseString(binaryValue, reverseBinary); // reverse string
+   
+   binaryValue = reverseBinary; // copy string back into inputted string
+}
+
+
+int main(void) {
+
+   /* Type your code here. Your code must call the functions.  */
+   int input;
+   scanf("%d", &input);
+   char string[50];
+   
+   IntegerToReverseBinary(input, string);
+   
+   printf("%s\n", string);
+
+   return 0;
+}
+
