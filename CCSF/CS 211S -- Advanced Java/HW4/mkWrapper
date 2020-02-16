@@ -1,0 +1,25 @@
+	/******************************mkWrapper()*******************************
+	 * task : make a wrapper
+	 */
+	   public static void mkWrapper()
+	   {
+	       String s = Thread.currentThread().getStackTrace()[1].getClassName();
+	       String wrapperName = s;
+	       File f = new File(wrapperName);
+	       if(!f.exists())
+	       {
+	          try
+	          {
+	          PrintWriter pw = new PrintWriter(f);
+	          pw.println("#!/bin/bash");
+	          pw.println("java -cp .:$CLASSPATH $(basename $0) ${1+\"$@\"}");
+	          pw.close();
+	          }catch(FileNotFoundException e){System.err.println(e);}
+	       }
+	       try
+	       { 
+	          Process p;
+	          p = new ProcessBuilder("chmod", "+x", f.getAbsolutePath()).start();
+	       }catch(IOException e){System.err.println(e);}
+	   }
+
