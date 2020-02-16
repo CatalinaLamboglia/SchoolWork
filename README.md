@@ -1,4 +1,4 @@
-# SchoolWork
-# Past school work sorted by institution > class > Assignment
+# School Work
+# Sorted by institution > class > Assignment
 # CCSF is older than SJSU
-# Some files from CCSF are lost or poorly commented
+# Some files from CCSF are lost
