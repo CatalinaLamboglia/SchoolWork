@@ -20,8 +20,6 @@ public class MaxHeapify
             output = output + a + ", ";
         }
         System.out.println(output);
-        
-        
     }
     
     public static void maxHeapify(int a[], int i)
@@ -38,7 +36,6 @@ public class MaxHeapify
              largest = r;
          if (largest != i)
          {
-         
              temp = a[i];
              a[i] = a[largest];
              a[largest] = temp;
