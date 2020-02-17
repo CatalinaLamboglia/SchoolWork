@@ -55,9 +55,6 @@ public class SubArrayCrossOver
             System.out.println("Time for Brute: " + bruteTime);
             System.out.println("Time for Recursion: " + recursiveTime);
         }
-
-        
-        
     }
     
     public static Integer rand()
