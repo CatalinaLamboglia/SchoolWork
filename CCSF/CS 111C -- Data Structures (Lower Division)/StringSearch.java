@@ -3,12 +3,11 @@ public class StringSearch
 {
   public static void main(String []args)
   {  
-    String[] sArray = {"a", "abso", "absolve", "butts", "bxz", "chair", "ciar dungeon lol","habba", "fabba",
-	                      "words are hard", "yellow butts lol", "ywaaah","ywx", "yzx", 
+    String[] sArray = {"a", "abso", "absolve", "bxz", "chair", "ywx", "yzx", 
 	                      "zebra", "zz"};
 	 Scanner scan = new Scanner(System.in);
 	 
-	 System.out.println("ENTER YO STRING: ");
+	 System.out.println("Enter your string: ");
 	 String search = scan.nextLine();
 	 
 	 int index = binarySearch(sArray, 0, 15, search);
@@ -21,8 +20,6 @@ public class StringSearch
 	 {
 	   System.out.println("String " + sArray[i] + " at index " + i);
     }
-
-   
   }
 
 
@@ -32,7 +29,7 @@ public class StringSearch
     int index;
     if (first > last) {
       index = -1;      // value not in original array
-  }
+    }
     else {
       // Invariant: If value is in anArray,
       //            anArray[first] <= value <= anArray[last]
