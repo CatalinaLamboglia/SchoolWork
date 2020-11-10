@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">StatesAndCapitols</string>
-    <string name="give_me_data">Input a US State or Capital</string>
-    <string name="edit_text">Input Here</string>
-    <string name="default_result">You haven\'t inputted anything yet</string>
-</resources>
